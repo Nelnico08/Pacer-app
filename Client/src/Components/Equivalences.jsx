@@ -15,7 +15,7 @@ export default function Equivalences() {
   }
 
   return (
-    <main className='w-full h-auto text-orange-900 py-4 bg-amber-200 mt-1'>
+    <main className='w-full h-auto text-orange-900 py-4 bg-amber-200 mt-1 shadow-md shadow-amber-900'>
       <div className='flex w-full justify-center shadow-md shadow-amber-900 pb-4 px-2'>
         <p className='pr-4'>Distancia: {distanceState}km</p>
         <p className='pr-4'>Tiempo: {timeState.hour}:{timeState.minutes}:{timeState.seconds}</p>

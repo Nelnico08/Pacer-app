@@ -1,4 +1,4 @@
-import { GET_DISTANCE, GET_EQUIVALENCES, GET_PACE, GET_TIME, GET_ZONES } from "../actionTypes/indes";
+import { GET_DISTANCE, GET_EQUIVALENCES, GET_PACE, GET_TIME, GET_ZONES, RESET_VALUES } from "../actionTypes/indes";
 
 const initialState = {
   distance: 0,
@@ -35,11 +35,20 @@ export const rootReducer = (state = initialState, action) => {
       return{
         ...state,
         equivalences: action.payload
-      }
+      };
     case GET_ZONES:
       return{
         ...state,
         zones: action.payload
+      };
+    case RESET_VALUES:
+      return{
+        ...state,
+        distance: 0,
+        time: {},
+        pace: {},
+        equivalences: [],
+        zones: []
       }
     default:
       return state

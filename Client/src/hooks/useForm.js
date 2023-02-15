@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { getDistance, getPace, getTime } from '../redux/actions';
+import { getDistance, getPace, getTime, resetValues } from '../redux/actions';
 
 export default function useForm(initialState) {
 
@@ -85,6 +85,11 @@ export default function useForm(initialState) {
     }else{
       alert('Se requieren 2 campos, distancia-tiempo, distancia-ritmo o tiempo-ritmo')
     }
+  };
+
+  const resetPace = (e) => {
+    e.preventDefault();
+    dispatch(resetValues())
   }
 
   return{
@@ -100,6 +105,7 @@ export default function useForm(initialState) {
     handlePaceChange,
     handlePaceFocus,
     handlePaceBlur,
-    handleOnSubmit
+    handleOnSubmit,
+    resetPace
   }
 }

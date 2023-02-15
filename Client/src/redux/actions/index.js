@@ -2,7 +2,7 @@ import equivalences from "../../assets/equivalences";
 import secondsToHourMins from "../../assets/secondsToHourMins";
 import timeToSeconds from "../../assets/timesToSeconds";
 import test1500 from "../../assets/test1500";
-import { GET_DISTANCE, GET_EQUIVALENCES, GET_PACE, GET_TIME, GET_ZONES } from "../actionTypes/indes";
+import { GET_DISTANCE, GET_EQUIVALENCES, GET_PACE, GET_TIME, GET_ZONES, RESET_VALUES } from "../actionTypes/indes";
 import zones from "../../assets/zones";
 
 export const getPace = (distance, time) => {
@@ -114,5 +114,11 @@ export const getZones = (distance, time) => {
   return {
     type: GET_ZONES,
     payload: get_zones
+  }
+};
+
+export const resetValues = () => {
+  return {
+    type: RESET_VALUES,
   }
 }
