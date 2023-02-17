@@ -10,7 +10,7 @@ export default function Zones() {
   }
   
   return (
-    <div className='w-full h-screen bg-amber-200 text-orange-900 mt-1 py-4'>
+    <div className='w-full h-auto bg-amber-200 text-orange-900 mt-1 py-4'>
         <main className='max-w-[500px] mx-auto grid grid-row-6  pt-2'>
         <div className='grid grid-cols-2'>
           <div></div>
