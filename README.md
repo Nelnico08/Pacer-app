@@ -11,7 +11,7 @@
 ---
 <!-- 🚀 Deploy: [Weather App](https://climateapp.vercel.app/) -->
 
-The objective of this application is to calculate pace, time and distance for runners and add extras for registered users.
+The objective of this application is to calculate pace, time and distance for runners
 
 
 ## Technologies
