@@ -1,4 +1,3 @@
-import React from 'react'
 import useEquivalences from '../../hooks/useEquivalences';
 
 export default function Equivalences() {

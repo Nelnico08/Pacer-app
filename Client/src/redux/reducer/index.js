@@ -1,11 +1,12 @@
-import { GET_DISTANCE, GET_EQUIVALENCES, GET_PACE, GET_TIME, GET_ZONES, RESET_VALUES } from "../actionTypes/indes";
+import { CHANGE_LANGUAGE, GET_DISTANCE, GET_EQUIVALENCES, GET_PACE, GET_TIME, GET_ZONES, RESET_VALUES } from "../actionTypes/indes";
 
 const initialState = {
   distance: 0,
   time: {},
   pace: {},
   equivalences: [],
-  zones: []
+  zones: [],
+  language: 'EN'
 };
 
 export const rootReducer = (state = initialState, action) => {
@@ -49,6 +50,11 @@ export const rootReducer = (state = initialState, action) => {
         pace: {},
         equivalences: [],
         zones: []
+      }
+    case CHANGE_LANGUAGE:
+      return{
+        ...state,
+        language: action.payload
       }
     default:
       return state
