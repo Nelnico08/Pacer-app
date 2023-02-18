@@ -10,7 +10,7 @@ import Footer from './Components/English/Footer'
 
 function App() {
 
-  const [language, SetLanguage] = useState('en')
+  const [language, SetLanguage] = useState('es')
 
   return (
     <div className="w-screen min-h-screen bg-gradient-to-b from-amber-200 via-amber-100 to-zinc-400">
