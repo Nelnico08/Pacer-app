@@ -9,9 +9,24 @@
 ### General Info
 
 ---
-<!-- 🚀 Deploy: [Weather App](https://climateapp.vercel.app/) -->
+🚀 Deploy: [Pacer app](https://pacer-app.vercel.app/)
 
-The objective of this application is to calculate pace, time and distance for runners
+The objective of this application is to calculate pace, time and distance for runners.
+
+
+Input distance along with time or pace for that distance and press calculate.
+
+
+<img src="./Client/src/images/Calculator.png" alt="calculator">
+
+Then you will be able to see equivalents for other distances and training zones.
+
+
+<img src="./Client/src/images/Equivalents.png" alt="equivalents">
+
+
+<img src="./Client/src/images/Training.png" alt="training zones">
+
 
 
 ## Technologies
