@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import EquivalencesEs from './Components/Spanish/EquivalencesEs';
 import FooterEs from './Components/Spanish/FooterEs';
 import FormEs from './Components/Spanish/FormEs';

@@ -1,4 +1,3 @@
-import React from 'react'
 import useZones from '../../hooks/useZones'
 
 export default function Zones() {
@@ -11,7 +10,8 @@ export default function Zones() {
   
   return (
     <div className='w-full h-auto bg-amber-200 text-orange-900 mt-1 py-4'>
-        <main className='max-w-[500px] mx-auto grid grid-row-6  pt-2'>
+      <p className='text-center py-4 font-bold text-xl'>Zonas de entrenamiento</p>
+        <main className='max-w-[500px] mx-auto grid grid-row-6 pt-2 text-center'>
         <div className='grid grid-cols-2'>
           <div></div>
           <p className='p-2 border border-orange-900 font-bold'>Ritmo en min/km</p>
