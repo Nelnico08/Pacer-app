@@ -35,16 +35,15 @@ export default function Form() {
             <input 
               type='number' 
               name='distance' 
-              placeholder='Distancia en km' 
+              placeholder='Distancia en m' 
               value={distanceInput} 
               onChange={handleDistanceChange}
               min={0}
-              step='0.01'
               className='w-[155px] shadow-lg shadow-amber-900 rounded text-right px-2 py-1'
               onFocus={handleDistanceFocus}
               onBlur={handleDistanceBlur}
             />
-            Km
+            m
           </div>
           <label className='text-center'>Tiempo</label>
           <div className='col-span-2 md:col-span-1'>

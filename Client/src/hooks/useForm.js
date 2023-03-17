@@ -67,7 +67,7 @@ export default function useForm(initialState) {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    if(distanceInput !== '0' && (timeInputs.hour !== '0' || timeInputs.minutes !== '0')){
+    if(distanceInput !== '0' && (timeInputs.hour !== '0' || timeInputs.minutes !== '0' || timeInputs.seconds !== '0')){
       dispatch(getPace(distanceInput, timeInputs))
       setDistanceInput(distance);
       setTimeInputs(time);
@@ -77,7 +77,7 @@ export default function useForm(initialState) {
       setDistanceInput(distance);
       setTimeInputs(time);
       setPaceInputs(pace)
-    }else if(paceInputs.minutes !== '0' && (timeInputs.hour !== '0' || timeInputs.minutes !== '0')){
+    }else if(paceInputs.minutes !== '0' && (timeInputs.hour !== '0' || timeInputs.minutes !== '0' || timeInputs.seconds !== '0')){
       dispatch(getDistance(paceInputs, timeInputs))
       setDistanceInput(distance);
       setTimeInputs(time);

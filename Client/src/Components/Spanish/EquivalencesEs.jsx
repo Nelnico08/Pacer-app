@@ -33,7 +33,7 @@ export default function Equivalences() {
             </div>
             {equivalence && equivalence?.map(elem => (
               <div key={elem.distance} className='grid grid-cols-3 hover:bg-amber-400 cursor-default md:hover:scale-110 duration-500'>
-                  <p className='px-2 py-1 border border-orange-900 font-bold'>{Number.isInteger(elem.distance) ? elem.distance : elem.distance === 21.1 ? "Media maratón" : "Maratón"}</p>
+                  <p className='px-2 py-1 border border-orange-900 font-bold'>{Number.isInteger(elem.distance) ? elem.distance : elem.distance === 21.1 ? "Media" : "Maratón"}</p>
                   <p className='px-2 py-1 border border-orange-900 font-bold'>{elem.time.hour}:{elem.time.minutes}:{elem.time.seconds}</p>
                   <p className='px-2 py-1 border border-orange-900 font-bold'>{elem.pace.minutes}:{elem.pace.seconds}</p>              
               </div>  

@@ -18,7 +18,7 @@ const equivalences = (distance, time) => {
 
       equivalenceArray.push(equivalence)
     }else if(i === 20){
-      const tempo = Math.floor(time*(21.1/distance)**1.06)
+      const tempo = Math.floor(time*(21.097/distance)**1.06)
       const tempoRun = secondsToHourMinutes(tempo);
       const paceInSeconds = Math.floor(tempo/21.1)
       const pace = secondsToHourMinutes(paceInSeconds)
@@ -31,7 +31,7 @@ const equivalences = (distance, time) => {
 
       equivalenceArray.push(equivalence)
     }else if(i === 40){
-      const tempo = Math.floor(time*(42.2/distance)**1.06)
+      const tempo = Math.floor(time*(42.195/distance)**1.06)
       const tempoRun = secondsToHourMinutes(tempo);
       const paceInSeconds = Math.floor(tempo/42.2)
       const pace = secondsToHourMinutes(paceInSeconds)

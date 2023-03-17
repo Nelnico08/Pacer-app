@@ -15,13 +15,14 @@ export const getPace = (distance, time) => {
   }
 
   distance = typeof distance === 'string' ? Number(distance) : distance;
-  const paceInSeconds_Km = timeInSeconds / distance;
+  const distanceToKm = distance / 1000
+  const paceInSeconds_Km = timeInSeconds / distanceToKm;
   const pace = secondsToHourMins(paceInSeconds_Km)
 
   return {
     type: GET_PACE,
     payload:{
-      distance,
+      distance: distanceToKm,
       time:{
         hour: timing.hour,
         minutes: timing.minutes < 10 ? `0${timing.minutes}` : timing.minutes,
@@ -41,13 +42,14 @@ export const getTime = (distance, pace) => {
   }
 
   distance = typeof distance === 'string' ? Number(distance) : distance;
-  const timeInSeconds = distance * paceInSeconds;
+  const distanceToKm = distance / 1000
+  const timeInSeconds = distanceToKm * paceInSeconds;
   const time = secondsToHourMins(timeInSeconds);
 
   return{
     type: GET_TIME,
     payload:{
-      distance,
+      distance: distanceToKm,
       time,
       pace:{
         minutes: pacing.minutes,
