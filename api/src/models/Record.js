@@ -1,32 +1,17 @@
 const { DataTypes } = require('sequelize')
 
 module.exports = (sequelize) => {
-    sequelize.define('equivalences',{
+    sequelize.define('record',{
         oneK: {
             type: DataTypes.STRING
         },
-        twoK: {
+        oneMile: {
             type: DataTypes.STRING
         },
         threeK: {
             type: DataTypes.STRING
         },
-        fourK: {
-            type: DataTypes.STRING
-        },
         fiveK: {
-            type: DataTypes.STRING
-        },
-        sixK: {
-            type: DataTypes.STRING
-        },
-        sevenK: {
-            type: DataTypes.STRING
-        },
-        eightK: {
-            type: DataTypes.STRING
-        },
-        nineK: {
             type: DataTypes.STRING
         },
         tenK: {

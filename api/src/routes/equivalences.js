@@ -1,8 +1,10 @@
 const { Router } = require('express')
-const { getEquivalences } = require('../controllers/equivalences.controller')
+const { getEquivalences, postEquivalences } = require('../controllers/equivalences.controller')
+const { verifyToken } = require("../middleware/authentication")
 
 const router = Router();
 
-router.use('/', getEquivalences)
+router.get('/', [verifyToken], getEquivalences)
+router.post('/', [verifyToken], postEquivalences)
 
 module.exports = router;

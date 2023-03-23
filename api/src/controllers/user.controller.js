@@ -1,4 +1,4 @@
-const { User, Equivalences, Training } = require('../db')
+const { User, Record, Equivalences, Training } = require('../db')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
@@ -33,7 +33,7 @@ const register = async(req, res, next) => {
             Number(process.env.SALT_ROUNDS)
         )
 
-        await User.create({
+        const newUser = await User.create({
             username,
             email,
             firstname,
@@ -41,6 +41,10 @@ const register = async(req, res, next) => {
             password: hashPass,
             user_image
         })
+
+        await Equivalences.create({userId: newUser.id})
+        await Training.create({userId: newUser.id})
+        await Record.create({userId: newUser.id})
 
         return res.status(201).json({ok: "User created"})
     } catch (error) {

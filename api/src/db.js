@@ -54,13 +54,16 @@ entry[1],
 ]);
 sequelize.models = Object.fromEntries(capsEntries);
 
-const { Equivalences, Training, User } = sequelize.models;
+const { Equivalences, Training, User, Record } = sequelize.models;
 
 User.hasOne(Equivalences)
 Equivalences.belongsTo(User)
 
 User.hasOne(Training)
 Training.belongsTo(User)
+
+User.hasOne(Record),
+Record.belongsTo(User)
 
 
 module.exports = {
