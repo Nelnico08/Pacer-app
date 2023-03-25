@@ -64,8 +64,8 @@ export default function Form() {
           
         </div>
         <div className='w-full flex justify-center'>
-          <input type='submit' value='Calcular' className='w-20 py-1 my-4 mr-4 bg-amber-600 rounded-lg text-orange-900 hover:bg-amber-500'/>
-          <input type='button' onClick={resetPace} value='Reset' className='w-20 py-1 my-4 ml-4 bg-amber-600 rounded-lg text-orange-900 hover:bg-amber-500'/>  
+          <input type='submit' value='Calcular' className='btn'/>
+          <input type='button' onClick={resetPace} value='Reset' className='btn'/>  
         </div>
     </form>
   )
