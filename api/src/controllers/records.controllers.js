@@ -4,7 +4,10 @@ const getRecords = async(req, res, next) => {
     try {
         const user_id = req.user_id
 
-        const records = await Record.findOne({where: {userId: user_id}})
+        const records = await Record.findOne({
+            where: {userId: user_id},
+            attributes: { exclude: ["userId"]}
+        })
 
         if(!records) return res.status(200).json({ message: "Records not found" })
 
@@ -17,7 +20,7 @@ const getRecords = async(req, res, next) => {
 const postRecords = async(req, res, next) => {
     try {
         const user_id = req.user_id
-        const { records } = req.body
+        const { records } = req.body  //"records": {"fiveK": "0:20:44-04:09","tenK": "0:43:52-04:23"}
 
         await Record.update( records, {where: { userId: user_id}});
 

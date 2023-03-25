@@ -4,7 +4,10 @@ const getTraining = async(req, res, next) => {
     try {
         const user_id = req.user_id
 
-        const training = await Training.findOne({where: {userId: user_id}})
+        const training = await Training.findOne({
+            where: {userId: user_id},
+            attributes: { exclude: ["userId"]}
+        })
 
         if(!training) return res.status(200).json({ message: "Training not found" })
 

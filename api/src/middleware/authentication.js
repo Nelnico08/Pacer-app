@@ -8,7 +8,6 @@ const verifyToken = async(req, res, next) => {
         if(!headerToken) return res.status(401).json({ error: "Token not found" })
 
         const token = headerToken.replace("Bearer ", "");
-        console.log("linea 11 ", token)
 
         try {
             const decoded = jwt.verify(token, process.env.JWT_SECRET)

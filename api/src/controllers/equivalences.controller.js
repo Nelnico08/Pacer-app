@@ -4,9 +4,12 @@ const getEquivalences = async(req, res, next) => {
     try {
         const user_id = req.user_id
 
-        const equivalences = await Equivalences.findOne({where: { userId: user_id}})
+        const equivalences = await Equivalences.findOne({
+            where: { userId: user_id},
+            attributes: { exclude: ["userId"]}
+        })
 
-        if(!equivalences.length) return res.status(200).json({ message: "Equivalences not found" })
+        if(!equivalences) return res.status(200).json({ message: "Equivalences not found" })
 
         return res.status(200).json(equivalences)
     } catch (error) {

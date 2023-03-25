@@ -1,5 +1,6 @@
 const { Router } = require("express")
 const { getRecords, postRecords } = require("../controllers/records.controllers")
+const { verifyToken } = require("../middleware/authentication")
 
 const router = Router()
 
