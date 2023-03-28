@@ -14,6 +14,10 @@ input[type=number] {
   .btn{
     @apply w-20 py-1 my-4 mr-4 bg-amber-600 rounded-lg text-orange-900 hover:bg-amber-500
   }
+  .inputForm{
+    @apply shadow-lg shadow-amber-900 rounded text-right px-2 py-1
+  }
+
 }
 
 @tailwind base;

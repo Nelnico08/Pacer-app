@@ -39,7 +39,7 @@ export default function Form() {
               value={distanceInput} 
               onChange={handleDistanceChange}
               min={0}
-              className='w-[155px] shadow-lg shadow-amber-900 rounded text-right px-2 py-1'
+              className='w-[155px] inputForm'
               onFocus={handleDistanceFocus}
               onBlur={handleDistanceBlur}
             />
@@ -47,18 +47,18 @@ export default function Form() {
           </div>
           <label className='text-center'>Time</label>
           <div className='col-span-2 md:col-span-1'>
-            <input type='number' name='hour' placeholder='hour' value={timeInputs.hour} onChange={handleTimeChange} onFocus={handleTimeFocus} onBlur={handleTimeBlur} min={0} className='w-10 shadow-lg shadow-amber-900 rounded text-right p-1' />
+            <input type='number' name='hour' placeholder='hour' value={timeInputs.hour} onChange={handleTimeChange} onFocus={handleTimeFocus} onBlur={handleTimeBlur} min={0} className='w-10 inputForm' />
             <label>h&nbsp;</label>
-            <input type='number' name='minutes' placeholder='min' value={timeInputs.minutes} onChange={handleTimeChange} onFocus={handleTimeFocus} onBlur={handleTimeBlur} min={0} max={59} className='w-10 shadow-lg shadow-amber-900 rounded text-right p-1' />
+            <input type='number' name='minutes' placeholder='min' value={timeInputs.minutes} onChange={handleTimeChange} onFocus={handleTimeFocus} onBlur={handleTimeBlur} min={0} max={59} className='w-10 inputForm' />
             <label>min&nbsp;</label>
-            <input type='number' name='seconds' placeholder='sec' value={timeInputs.seconds} onChange={handleTimeChange} onFocus={handleTimeFocus} onBlur={handleTimeBlur} min={0} max={59} className='w-10 shadow-lg shadow-amber-900 rounded text-right p-1' />
+            <input type='number' name='seconds' placeholder='sec' value={timeInputs.seconds} onChange={handleTimeChange} onFocus={handleTimeFocus} onBlur={handleTimeBlur} min={0} max={59} className='w-10 inputForm' />
             <label>sec&nbsp;</label>
           </div>
           <label className='text-center'>Pace</label>
           <div className='col-span-2 md:col-span-1'>
-              <input type='number' name='minutes' placeholder='min' value={paceInputs.minutes} onChange={handlePaceChange} onFocus={handlePaceFocus} onBlur={handlePaceBlur} min={0} max={59} className='w-10 shadow-lg shadow-amber-900 rounded text-right p-1' />
+              <input type='number' name='minutes' placeholder='min' value={paceInputs.minutes} onChange={handlePaceChange} onFocus={handlePaceFocus} onBlur={handlePaceBlur} min={0} max={59} className='w-10 inputForm' />
               <label>min&nbsp;</label>
-              <input type='number' name='seconds' placeholder='sec' value={paceInputs.seconds} onChange={handlePaceChange} onFocus={handlePaceFocus} onBlur={handlePaceBlur} min={0} max={59} className='w-10 shadow-lg shadow-amber-900 rounded text-right p-1' />
+              <input type='number' name='seconds' placeholder='sec' value={paceInputs.seconds} onChange={handlePaceChange} onFocus={handlePaceFocus} onBlur={handlePaceBlur} min={0} max={59} className='w-10 inputForm' />
               <label>sec&nbsp;</label>
           </div>
           
