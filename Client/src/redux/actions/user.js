@@ -1,3 +1,4 @@
+import { baseUrl } from "../../main"
 import { CHANGE_LANGUAGE } from "../actionTypes"
 
 export const changeLanguage = (language) => {
@@ -8,7 +9,7 @@ export const changeLanguage = (language) => {
 }
 
 export const registerUser = (user) => () => {
-  fetch(`http://localhost:3001/user/register`,{
+  fetch(`${baseUrl}/user/register`,{
     method: 'POST',
     headers: { 'Content-Type' : 'application/json' },
     body: JSON.stringify(user)
