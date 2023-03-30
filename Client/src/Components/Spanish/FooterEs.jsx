@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import useLanguage from '../../hooks/useLanguage';
 
 export default function Footer() {
@@ -21,6 +22,9 @@ export default function Footer() {
                 Creado por <a href='https://nelson-escurra.netlify.app/' className='text-indigo-900' target="_blank" rel="noopener noreferrer">Nelson Escurra</a>
             </h3>
         </div>
+        {/* <div>
+          <Link to={"/signin"}>Regístrate</Link>
+        </div> */}
     </div>
   )
 }

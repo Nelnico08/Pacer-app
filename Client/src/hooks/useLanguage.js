@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { changeLanguage } from "../redux/actions";
+import { changeLanguage } from "../redux/actions/user";
 
 
 export default function useLanguage() {
 
-  const language = useSelector(state => state.language)
+  const language = useSelector(state => state.user.language)
   const dispatch = useDispatch();
 
   const handlerLanguage = (e) => {

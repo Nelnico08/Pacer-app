@@ -22,19 +22,19 @@ export default function Zones() {
         </div>
         <div className='grid grid-cols-2 hover:bg-amber-400 cursor-default md:hover:scale-110 duration-500'>
           <p className='p-2 border border-orange-900 font-bold'>Aerobic</p>
-          <div className='p-2 border border-orange-900'>{zone[1].minutes}:{zone[1].seconds} - {zone[2].minutes}:{zone[2].seconds} </div>
+          <div className='p-2 border border-orange-900'>{zone[2].minutes}:{zone[2].seconds} - {zone[1].minutes}:{zone[1].seconds} </div>
         </div>
         <div className='grid grid-cols-2 hover:bg-amber-400 cursor-default md:hover:scale-110 duration-500'>
           <p className='p-2 border border-orange-900 font-bold'>Superaerobic</p>
-          <div className='p-2 border border-orange-900'>{zone[2].minutes}:{zone[2].seconds} - {zone[3].minutes}:{zone[3].seconds}</div>
+          <div className='p-2 border border-orange-900'>{zone[3].minutes}:{zone[3].seconds} - {zone[2].minutes}:{zone[2].seconds}</div>
         </div>
         <div className='grid grid-cols-2 hover:bg-amber-400 cursor-default md:hover:scale-110 duration-500'>
           <p className='p-2 border border-orange-900 font-bold'>VO2max</p>
-          <div className='p-2 border border-orange-900'>{zone[4].minutes}:{zone[4].seconds} - {zone[5].minutes}:{zone[5].seconds}</div>
+          <div className='p-2 border border-orange-900'>{zone[5].minutes}:{zone[5].seconds} - {zone[4].minutes}:{zone[4].seconds}</div>
         </div>
         <div className='grid grid-cols-2 hover:bg-amber-400 cursor-default md:hover:scale-110 duration-500'>
           <p className='p-2 border border-orange-900 font-bold'>Interval</p>
-          <div className='p-2 border border-orange-900'>{zone[5].minutes}:{zone[5].seconds} - {zone[6].minutes}:{zone[6].seconds}</div>
+          <div className='p-2 border border-orange-900'>{zone[6].minutes}:{zone[6].seconds} - {zone[5].minutes}:{zone[5].seconds}</div>
         </div>
       </main> 
     </div>

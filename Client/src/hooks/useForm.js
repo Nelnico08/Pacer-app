@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { getDistance, getPace, getTime, resetValues } from '../redux/actions';
+import { getDistance, getPace, getTime, resetValues } from '../redux/actions/index';
 
 export default function useForm(initialState) {
 
