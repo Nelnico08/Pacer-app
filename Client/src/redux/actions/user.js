@@ -2,6 +2,9 @@ import { baseUrl } from "../../main"
 import { CHANGE_LANGUAGE } from "../actionTypes"
 
 export const changeLanguage = (language) => {
+
+  window.localStorage.setItem('language', language)
+
   return{
     type: CHANGE_LANGUAGE,
     payload: language

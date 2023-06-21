@@ -3,12 +3,24 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai"
 import { useNavigate } from "react-router-dom"
 import { useFormik } from "formik"
 import { basicSchemaEs } from '../../../schemas'
+import { useDispatch } from "react-redux"
+import { registerUser } from "../../../redux/actions/user"
 
 export default function RegisterForm() {
   const [inputType, setInputType] = useState('password')
 
+  const dispatch = useDispatch()
+
   const onSubmit = (values, actions) => {
+    const user = {
+      firstname: values.firstname,
+      lastname: values.lastname,
+      username: values.username,
+      email: values.email,
+      password: values.password
+    }
     actions.resetForm()
+    dispatch(registerUser(user))
   }
 
   const { 
